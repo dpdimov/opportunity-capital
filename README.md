@@ -12,6 +12,10 @@ operationalisation of Dimov, D., & Günestepe, K. (2024). Capitalizing the futur
 Opportunity capital as symbolic significance of an entrepreneur's future-venture
 story. *Entrepreneurship & Regional Development*, 36(9–10), 1145–1160.
 
+The instructions below let you reproduce the thought experiment on your own
+machine and adapt it — personas, story archetypes, models, and the prompts
+that drive each role — to extend or probe the design.
+
 ## Install
 
 ```
