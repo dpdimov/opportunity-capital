@@ -1,0 +1,77 @@
+{
+  "evaluator_model": "claude-sonnet-4-6",
+  "temperature": 0.7,
+  "max_rounds": 5,
+  "triads": [
+    {
+      "id": "T1a",
+      "label": "Prosaic | High fit",
+      "entrepreneur": "config/entrepreneur_jamie.json",
+      "investor": "config/investor_sofia.json",
+      "story": "prosaic",
+      "note": "Familiar object, familiar description. High founder-venture fit. Prediction: fast OC accumulation, legitimacy-commitment gap closes early."
+    },
+    {
+      "id": "T1b",
+      "label": "Prosaic | Low fit",
+      "entrepreneur": "config/entrepreneur_rachel.json",
+      "investor": "config/investor_sofia.json",
+      "story": "prosaic",
+      "note": "Familiar object, familiar description. Low founder-venture fit. Prediction: legitimacy established quickly, but commitment gap persists as Sofia probes operational credibility."
+    },
+    {
+      "id": "T2a",
+      "label": "Revelatory | High fit",
+      "entrepreneur": "config/entrepreneur_marcus.json",
+      "investor": "config/investor_sofia.json",
+      "story": "revelatory",
+      "note": "Familiar object, novel description. High founder-venture fit. Prediction: novel framing engages investor imagination; strong symbolic capital converts legitimacy to commitment."
+    },
+    {
+      "id": "T2b",
+      "label": "Revelatory | Low fit",
+      "entrepreneur": "config/entrepreneur_divya.json",
+      "investor": "config/investor_sofia.json",
+      "story": "revelatory",
+      "note": "Familiar object, novel description. Low founder-venture fit on logistics side. Prediction: real estate thesis lands credibly; logistics execution gap creates persistent legitimacy-commitment asymmetry."
+    },
+    {
+      "id": "T3a",
+      "label": "Metaphorical | High fit",
+      "entrepreneur": "config/entrepreneur_aya.json",
+      "investor": "config/investor_priya.json",
+      "story": "metaphorical",
+      "note": "Novel object, familiar description. High founder-venture fit. Prediction: metaphors scaffold investor imagination; technical depth confirmed by probing; steady OC accumulation."
+    },
+    {
+      "id": "T3b",
+      "label": "Metaphorical | Low fit",
+      "entrepreneur": "config/entrepreneur_ben.json",
+      "investor": "config/investor_priya.json",
+      "story": "metaphorical",
+      "note": "Novel object, familiar description. Low founder-venture fit on technical depth. Prediction: metaphors engage investor but probing exposes credibility seam; OC accumulation stalls or reverses around round 3."
+    },
+    {
+      "id": "T4a",
+      "label": "Fantastic | High fit",
+      "entrepreneur": "config/entrepreneur_kenji.json",
+      "investor": "config/investor_priya.json",
+      "story": "fantastic",
+      "note": "Novel object, novel description. High founder-venture fit. Prediction: symbolic capital sustains engagement despite extreme imaginative burden; legitimacy volatile, commitment cautious but open."
+    },
+    {
+      "id": "T4b",
+      "label": "Fantastic | Low fit",
+      "entrepreneur": "config/entrepreneur_lena.json",
+      "investor": "config/investor_priya.json",
+      "story": "fantastic",
+      "note": "Novel object, novel description. Low founder-venture fit. Prediction: legitimacy collapse likely; lowest OC of any cell; probable rejection."
+    }
+  ],
+  "commitment_threshold": 8.0,
+  "legitimacy_threshold": 3.0,
+  "output_dir": "results",
+  "kts_enabled": false,
+  "kts_method": "heuristic",
+  "design_note": "4x2 factorial: four story archetypes (prosaic, revelatory, metaphorical, fantastic) x two founder-venture fit conditions (high, low). Investor assignment is domain-matched to story: Sofia Reyes for consumer/operations stories (prosaic, revelatory); Priya Sharma for deep-tech stories (metaphorical, fantastic). Evaluator held constant at claude-sonnet-4-6 across all triads for scoring consistency."
+}

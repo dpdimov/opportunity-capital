@@ -1,0 +1,19 @@
+# Secrets
+.env
+
+# Simulation outputs
+results/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
