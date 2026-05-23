@@ -1,9 +1,8 @@
-# opportunity-capital
+# A Computational Thought Experiment on Opportunity Capital with LLM Agents
 
-A Computational Thought Experiment on Opportunity Capital with LLM Agents. This is
-the code for Dimov, D. (2026). Giving Texture to Theory: A Computational Thought
-Experiment on Opportunity Capital with LLM Agents. *Journal of Business Venturing
-Insights*, In press.
+This is the code for Dimov, D. (2026). Giving Texture to Theory: A Computational
+Thought Experiment on Opportunity Capital with LLM Agents. *Journal of Business
+Venturing Insights*, In press.
 
 The thought experiment runs across a 4×2 factorial design: four story archetypes
 crossed with two levels of founder–venture fit (high and low). This design creates
