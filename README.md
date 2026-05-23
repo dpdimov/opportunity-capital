@@ -1,11 +1,17 @@
 # opportunity-capital
 
-Multi-agent simulation of the opportunity-capital model — a **4×2 factorial design**:
-four story archetypes (prosaic, revelatory, metaphorical, fantastic) × two
-founder–venture fit conditions (high, low) = 8 entrepreneur/investor/evaluator triads.
+A Computational Thought Experiment on Opportunity Capital with LLM Agents. This is
+the code for Dimov, D. (2026). Giving Texture to Theory: A Computational Thought
+Experiment on Opportunity Capital with LLM Agents. *Journal of Business Venturing
+Insights*, In press.
 
-Based on Dimov & Gunestepe (2024), "Capitalizing the future: opportunity capital
-as symbolic significance of an entrepreneur's future-venture story."
+The thought experiment runs across a 4×2 factorial design: four story archetypes
+crossed with two levels of founder–venture fit (high and low). This design creates
+8 distinct scenarios in which an entrepreneur of specified fit and with specified
+story archetype goes through five rounds of dialogue with an investor. This is an
+operationalisation of Dimov, D., & Günestepe, K. (2024). Capitalizing the future:
+Opportunity capital as symbolic significance of an entrepreneur's future-venture
+story. *Entrepreneurship & Regional Development*, 36(9–10), 1145–1160.
 
 ## Install
 
@@ -22,8 +28,8 @@ You need at least one provider key set, matching the models you intend to run
 ## Run
 
 ```
-python future_sim.py                  # all 8 triads
-python future_sim.py --triad 0        # single triad (0–7)
+python future_sim.py                  # all 8 scenarios
+python future_sim.py --triad 0        # single scenario (0–7)
 python future_sim.py --verbose        # full transcripts per round
 python future_sim.py --kts            # enable KTS thinking-style scoring
 python future_sim.py --seed 42        # reproducible model_pool allocation
@@ -35,7 +41,7 @@ Each run writes to `results/<YYYYMMDD_HHMMSS>/`:
 
 ## Design
 
-`config/sim_config.json` defines 8 triads:
+`config/sim_config.json` defines 8 scenarios:
 
 | ID  | Archetype    | Fit  | Entrepreneur | Investor     |
 |-----|--------------|------|--------------|--------------|
@@ -83,13 +89,13 @@ API keys are read from `.env` (`ANTHROPIC_API_KEY`, `GEMINI_API_KEY`,
 
 ## File map
 
-- `future_sim.py` — CLI entrypoint, triad loop, output writers
+- `future_sim.py` — CLI entrypoint, scenario loop, output writers
 - `dialogue.py` — single-round execution (entrepreneur utterance → investor response → scoring)
 - `sim_state.py` — dataclasses for personas, rounds, dialogue state
 - `capital.py` — entrepreneur/investor capital profiles, opportunity capital (geometric mean)
 - `stories.py` — the four archetype definitions (prosaic/revelatory/metaphorical/fantastic)
 - `prompts.py` — all LLM prompts
-- `scoring.py` — per-triad scoring and comparative analysis
+- `scoring.py` — per-scenario scoring and comparative analysis
 - `llm_client.py` — multi-provider query wrapper with JSON extraction + retries
 - `config/` — 8 entrepreneur personas, 2 investor personas, `sim_config.json`
 
